@@ -7,15 +7,20 @@
     
 </head>
 <body>
-    <h1>"Mi pagina"</h1>
-    pantalla.style.color = "blue"; 
-    pantalla.style.fontSize = "30px";
+    <h1 id="Mi pagina">Mi pagina</h1>
+
     <div id="mensaje"></div>
     <script>
-        pantalla.innerText="Holaaaa";
+        const pantallatitulo=document.getElementById("Mi pagina");
+        const cajamensaje=document.getElementById("mensaje");
+      
      let nombre= "Fidel";
+         pantallatitulo.style.color = "blue"; 
+    pantallatitulo.style.fontSize = "150px";
+    cajamensaje.style.style.color= "red";
+    cajamensaje.style.color="50px";
 
-    document.getElementById("mensaje").innerText="Hola"+ nombre;
+     pantalla.innerText="Holaaaa";
     </script>
 </body>
 </html>
