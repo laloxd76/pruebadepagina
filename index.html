@@ -13,15 +13,24 @@
 
     <div id="mensaje"></div>
     <script>
-        const pantallatitulo=document.getElementById("Mi pagina");
-        const cajamensaje=document.getElementById("mensaje");
-      
+     const pantallatitulo=document.getElementById("Mi pagina");
+     const cajamensaje=document.getElementById("mensaje");
+     const barra=document.getElementById("barra");
      let nombre= "Fidel";
-     pantallatitulo.style.color = "blue"; 
-     pantallatitulo.style.fontSize = "35px";
-     pantallatitulo.style.marginLeft= "200px";
+     
+     barra.style.color="blue";
+     barra.style.width="100%";
+     barra.style.position="fixed";
+     barra.style.top="0";
+     barra.style.left="0";
+     barra.style.padding="10px 0";
+     barra.style.textAlign="center";
 
-     cajamensaje.style.color= "red";
+     pantallatitulo.style.color = "white"; 
+     pantallatitulo.style.fontSize = "30px";
+     pantallatitulo.style.marginLeft= "5px";
+
+     cajamensaje.style.color= "white";
      cajamensaje.style.fontSize="20px";
      cajamensaje.style.marginLeft="50px";
      cajamensaje.style.marginTop="75px";
