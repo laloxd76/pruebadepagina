@@ -38,12 +38,30 @@
       premium:true
      },
      {
-      nombre: "Locion de Spiderman",
+      nombre: "Loción de Spiderman",
       descripcion:"Locion de niño",
       imagen:"https://republiccosmetics.com/cdn/shop/files/Perfume_Spiderman_510x.progressive.jpg?v=1741796869",
       precio:"$150 mxn",
       fuente:"serif",
       premium:false
+     },
+     {
+      nombre: "Acqua di Gio Profondo",
+      descripcion:"Fragancia Fresca",
+      imagen:"https://disfragancias.com/cdn/shop/files/4_988ba579-90e3-4594-9293-29cd4235a2a6.jpg?v=1750971694",
+      precio:"$2,330 mxn",
+      color:"#163166",
+      fuente:"serif",
+      premium:true
+     },
+     {
+      nombre: "Versace Eros",
+      descripcion:"Fragancia de Vainilla",
+      imagen:"https://www.versace.com/on/demandware.static/-/Sites-ver-master-catalog/es_MX/v1766290860611/original/90_R740011-R200MLS_RNUL_20_Eros~EDT~200~ml-Accessories-Versace-online-store_0_1.jpg",
+      precio:"$2,150 mxn",
+      color:"#6BA3FF",
+      fuente:"serif",
+      premium:true
      }
      ]
 
@@ -107,7 +125,7 @@
          <img src="${p.imagen}" style="width:100%; border-radius:5px; height:200px; object-fit:cover;">
          <p>${p.descripcion}</p>
          <p style="font-weight:bold; font-size:20px;">${p.precio}</p>
-         <button onclick="alert('Añadiste ${p.nombre} al carrito')" style="cursor:pointer; padding:10px; border-radius:5px; border:none; background:#5C95E6; color:white; font-weight:bold; width:100%;">COMPRAR</button>font-weight:bold; width:100%;">COMPRAR</button>
+         <button onclick="alert('Añadiste ${p.nombre} al carrito')" style="cursor:pointer; padding:10px; border-radius:5px; border:none; background:#5C95E6; color:white; font-weight:bold; width:100%;">COMPRAR</button>
             `;
 
             tienda.appendChild(card);
