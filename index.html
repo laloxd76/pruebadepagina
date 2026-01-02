@@ -1,52 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primer Cliente | Negocio Local</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
 </head>
-<body class="bg-gray-100 font-sans text-gray-900">
-
-    <nav class="bg-blue-600 p-4 text-white shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold italic">Nombre del Negocio</h1>
-            <ul class="flex gap-4">
-                <li><a href="#" class="hover:underline">Inicio</a></li>
-                <li><a href="#" class="hover:underline">Productos</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="container mx-auto my-10 p-8 bg-white rounded-xl shadow-md text-center">
-        <h2 class="text-4xl font-extrabold mb-4 text-blue-800">¡Bienvenidos a nuestra tienda!</h2>
-        <p class="text-lg text-gray-600 mb-6">Ofrecemos los mejores productos de la localidad con atención personalizada.</p>
-        
-        <button id="btnWhatsApp" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
-            Pedir por WhatsApp
-        </button>
-    </header>
-<section class="container mx-auto my-10 p-4">
-    <h3 class="text-2xl font-bold text-center mb-8">Nuestros Productos</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Producto" class="w-full h-48 object-cover">
-            <div class="p-4 text-center">
-                <h4 class="font-bold text-xl">Reloj Elegante</h4>
-                <p class="text-gray-600">$599.00</p>
-                <button class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Ver más</button>
-            </div>
-        </div>
-        </div>
-</section>
-    <script>
-        // Lógica para el botón
-        const boton = document.getElementById('btnWhatsApp');
-        boton.addEventListener('click', () => {
-            const tel = "521234567890"; // Reemplaza con el número real del cliente
-            const msj = "Hola! Vi su página web y me gustaría pedir información.";
-            window.open(`https://wa.me/${tel}?text=${encodeURIComponent(msj)}`);
-        });
-    </script>
+<body>
+    <script src="variable1/nombre"></script>
 </body>
 </html>
