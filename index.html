@@ -12,10 +12,16 @@
     </div>
 
     <div id="mensaje"></div>
+    <div id="apartados">
+        <h2 id="Perfume">Datos </h2>
+        <p>Gran perfume!</p>
+    </div>
+
     <script>
      const pantallatitulo=document.getElementById("Mi-pagina");
      const cajamensaje=document.getElementById("mensaje");
      const barra=document.getElementById("barra");
+     const apartados=document.getElementById("apartados");
      let nombre= "Fidel";
      
      barra.style.backgroundColor="#5C95E6";
@@ -27,17 +33,26 @@
      barra.style.textAlign="center";
      barra.style.zIndex="1000";
 
+     apartados.style.backgroundColor="#5CE68C";
+     apartados.style.top="500px";
+     apartados.style.left="100px";
+     apartados.style.width="250px";
+     apartados.style.padding="15px";
+     apartados.style.borderRadius="10px";
+     apartados.style.boxShadow="5px 5px 15px rgba(0,0,0,0.5)";
+     apartados.style.fontFamily="sans-serif";
+
      pantallatitulo.style.color = "white"; 
      pantallatitulo.style.fontSize = "30px";
      pantallatitulo.style.marginLeft= "5px";
+     pantallatitulo.style.fontFamily="serif";
 
      cajamensaje.style.color= "white";
      cajamensaje.style.fontSize="20px";
-     cajamensaje.style.marginLeft="50px";
+     cajamensaje.style.marginLeft="20px";
      cajamensaje.style.marginTop="150px";
      cajamensaje.innerText="Holaaaa";
      cajamensaje.style.color="#5C95E6"
-     cajamensaje.style.textAlign="center";
 
      document.body.style.backgroundImage= "url(https://universidadeuropea.com/resources/media/images/analista-ciberseguridad-800x450.width-640.jpg)"
      document.body.style.backgroundRepeat = "no-repeat";
