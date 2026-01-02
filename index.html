@@ -24,13 +24,26 @@
       nombre: "Dior Sauvage",
       descripcion:"Fragancia Increiblemente Sexy",
       imagen:"https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Library-Sites-DiorSharedLibrary/default/dwfb761903/images/beauty/01-FRAGRANCES/2025/PDP-REVAMP/SAUVAGE/Y0996460/POSTER_CAPSULE_Elixir_VA_916.jpg?sw=800",
-      precio:"$2,800 mxn"
+      precio:"$2,800 mxn",
+      color:"#021123",
+      fuente:"serif",
+      premium:true
      },
      {
       nombre: "Bleu de Chanel",
       descripcion:"Elegancia pura",
       imagen:"https://www.chanel.com/puls-img/q_auto:good,f_auto,dpr_1.1/1760520673129-backup-3d-bleu-1x1_1080x1080.png",
-      precio:"$3,100 mxn"
+      precio:"$3,100 mxn",
+      fuente:"serif",
+      premium:true
+     },
+     {
+      nombre: "Locion de Spiderman",
+      descripcion:"Locion de niño",
+      imagen:"https://republiccosmetics.com/cdn/shop/files/Perfume_Spiderman_510x.progressive.jpg?v=1741796869",
+      precio:"$150 mxn",
+      fuente:"serif",
+      premium:false
      }
      ]
 
@@ -61,7 +74,10 @@
         {
             const card = document.createElement("div");
             
-            // Estilos del recuadro (Tu diseño original)
+         card.style.backgroundColor = p.color || "#385696"; 
+         card.style.fontFamily = p.fuente || "sans-serif";
+
+            // Estilos del recuadro
             card.style.backgroundColor = "#385696";
             card.style.width = "250px";
             card.style.padding = "15px";
@@ -71,13 +87,27 @@
             card.style.textAlign = "center";
             card.style.color = "white";
 
+            if (p.premium === true) {
+        card.style.border = "3px solid #FFD700"; // Borde dorado sólido
+        card.style.boxShadow = "0px 0px 20px rgba(255, 215, 0, 0.6)"; // Resplandor dorado
+        
+        // Opcional: Añadir una etiqueta de "Premium" antes del nombre
+        const etiqueta = document.createElement("span");
+        etiqueta.innerText = "⭐ EDICIÓN PREMIUM";
+        etiqueta.style.fontSize = "10px";
+        etiqueta.style.color = "#FFD700";
+        card.appendChild(etiqueta);
+        } else {
+        card.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.5)"; // Sombra normal
+        }
+
             // Contenido del cuadro
             card.innerHTML = `
-                <h2 style="margin-top:0;">${p.nombre}</h2>
-                <img src="${p.imagen}" style="width:100%; border-radius:5px; height:200px; object-fit:cover;">
-                <p>${p.descripcion}</p>
-                <p style="font-weight:bold; font-size:20px;">${p.precio}</p>
-                <button onclick="alert('Añadiste ${p.nombre} al carrito')" style="cursor:pointer; padding:10px; border-radius:5px; border:none; background:#5C95E6; color:white; font-weight:bold; width:100%;">COMPRAR</button>
+         <h2 style="margin-top:0;">${p.nombre}</h2>
+         <img src="${p.imagen}" style="width:100%; border-radius:5px; height:200px; object-fit:cover;">
+         <p>${p.descripcion}</p>
+         <p style="font-weight:bold; font-size:20px;">${p.precio}</p>
+         <button onclick="alert('Añadiste ${p.nombre} al carrito')" style="cursor:pointer; padding:10px; border-radius:5px; border:none; background:#5C95E6; color:white; font-weight:bold; width:100%;">COMPRAR</button>font-weight:bold; width:100%;">COMPRAR</button>
             `;
 
             tienda.appendChild(card);
