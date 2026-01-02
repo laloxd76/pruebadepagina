@@ -14,6 +14,7 @@
     <div id="mensaje"></div>
     <div id="apartados">
         <h2 id="Perfume">Datos </h2>
+        <img id="Perfumefoto" src="" alt="Perfume">
         <p id="datos">datos</p>
     </div>
 
@@ -24,6 +25,7 @@
      const apartados=document.getElementById("apartados");
      const perfume=document.getElementById("Perfume");
      const datos=document.getElementById("datos");
+     const Perfumefoto = document.getElementById("fotoperfume");
      let nombre= "Fidel";
      
      barra.style.backgroundColor="#5C95E6";
@@ -44,6 +46,9 @@
      apartados.style.borderRadius="10px";
      apartados.style.boxShadow="5px 5px 15px rgba(0,0,0,0.5)";
      apartados.style.fontFamily="sans-serif";
+     apartados.style.display = "flex";
+     apartados.style.flexDirection = "column";
+     apartados.style.alignItems = "center";
 
      //Información de los perfumes
 
@@ -53,6 +58,14 @@
      datos.innerText="Perfume increiblemente sexy";
      datos.style.textAlign="center";
      datos.style.color="#333";
+     fotoPerfume.src = "https://www.dior.com/es_mx/beauty/products/sauvage-elixir-Y0996460.html"; 
+     fotoPerfume.style.width = "100%"; 
+     fotoPerfume.style.height = "auto"; 
+     fotoPerfume.style.borderRadius = "5px"; 
+     fotoPerfume.style.marginTop = "10px";
+     fotoPerfume.style.marginBottom = "10px";
+
+     // Diseño de pagina
 
      pantallatitulo.style.color = "white"; 
      pantallatitulo.style.fontSize = "30px";
@@ -70,6 +83,7 @@
      document.body.style.backgroundRepeat = "no-repeat";
      document.body.style.backgroundSize = "cover";       
      document.body.style.backgroundAttachment = "fixed"; 
+     document.body.style.minHeight = "100vh";
     </script>
 </body>
 </html>
