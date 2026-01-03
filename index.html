@@ -12,12 +12,13 @@
     </div>
 
     <div id="contenedor-tienda"></div>
+    <div id="pantalla-detalle" style="display: none;"></div>
 
     <script>
      const pantallatitulo=document.getElementById("Mi-pagina");
      const tienda=document.getElementById("contenedor-tienda");
      const barra=document.getElementById("barra");
-     
+     const vistaDetalle=document.getElementById("pantalla-detalle");
      const listadeperfumes= 
      [
      { 
@@ -65,6 +66,45 @@
      }
      ]
 
+function mostrarDetalle(p) {
+
+    tienda.style.display = "none";
+    vistaDetalle.style.display = "block";
+    vistaDetalle.style.marginTop = "150px";
+    vistaDetalle.style.textAlign = "center";
+    vistaDetalle.style.color = "white";
+    vistaDetalle.style.fontFamily = "sans-serif";
+    vistaDetalle.innerHTML = `
+        <div style="background: rgba(0,0,0,0.8); padding: 40px; border-radius: 20px; max-width: 800px; margin: auto;">
+            <button onclick="volverALaTienda()" style="float: right; cursor: pointer;">✖ Cerrar</button>
+            
+            <h1 style="color: #FFD700;">${p.nombre}</h1>
+            <div style="display: flex; gap: 30px; align-items: center; text-align: left;">
+                <img src="${p.imagen}" style="width: 300px; border-radius: 15px; box-shadow: 0 0 20px white;">
+                <div>
+                    <h3>Descripción Detallada:</h3>
+                    <p style="font-size: 18px; line-height: 1.6;">
+                        ${p.descripcion} <br><br>
+                        Este perfume cuenta con notas de salida frescas y un cuerpo amaderado. 
+                        Ideal para ocasiones especiales.
+                    </p>
+                    <p style="font-size: 24px; font-weight: bold; color: #5C95E6;">Precio: ${p.precio}</p>
+                    <button onclick="alert('¡Gracias por tu compra de ${p.nombre}!')" 
+                            style="padding: 15px 30px; font-size: 18px; background: #5C95E6; color: white; border: none; border-radius: 10px; cursor: pointer; width: 100%;">
+                            COMPRAR AHORA
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Función para regresar
+function volverALaTienda() {
+    vistaDetalle.style.display = "none";
+    tienda.style.display = "flex"; // Volvemos a mostrar la tienda
+}
+
      //Diseño Pagina
 
      barra.style.backgroundColor="#5C95E6";
@@ -87,21 +127,24 @@
      tienda.style.flexWrap = "wrap";
      tienda.style.justifyContent = "center";
      tienda.style.gap = "20px";
+     tienda.style.maxWidth = "1200px"; 
+     tienda.style.marginLeft = "auto";
+     tienda.style.marginRight = "auto";
 
      listadeperfumes.forEach(p => 
         {
+
             const card = document.createElement("div");
-            
+                        card.style.cursor="pointer";
+            card.onclick=function(){mostrarDetalle(p);};
          card.style.backgroundColor = p.color || "#385696"; 
          card.style.fontFamily = p.fuente || "sans-serif";
 
             // Estilos del recuadro
-            card.style.backgroundColor = "#385696";
             card.style.width = "250px";
             card.style.padding = "15px";
             card.style.borderRadius = "10px";
             card.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.5)";
-            card.style.fontFamily = "sans-serif";
             card.style.textAlign = "center";
             card.style.color = "white";
 
@@ -120,15 +163,14 @@
         }
 
             // Contenido del cuadro
-            card.innerHTML = `
-         <h2 style="margin-top:0;">${p.nombre}</h2>
-         <img src="${p.imagen}" style="width:100%; border-radius:5px; height:200px; object-fit:cover;">
-         <p>${p.descripcion}</p>
-         <p style="font-weight:bold; font-size:20px;">${p.precio}</p>
-         <button onclick="alert('Añadiste ${p.nombre} al carrito')" style="cursor:pointer; padding:10px; border-radius:5px; border:none; background:#5C95E6; color:white; font-weight:bold; width:100%;">COMPRAR</button>
-            `;
+             card.innerHTML += `
+             <h2 style="margin-top:0;">${p.nombre}</h2>
+             <img src="${p.imagen}" style="width:100%; border-radius:5px; height:200px; object-fit:cover;">
+             <p>${p.descripcion}</p>
+             <p style="font-weight:bold; font-size:20px;">${p.precio}</p>
+         `;
 
-            tienda.appendChild(card);
+         tienda.appendChild(card);
         });
 
      //Fondo de la pagina
