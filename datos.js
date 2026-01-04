@@ -22,7 +22,7 @@ const listadeperfumes = [
         nombre: "Miss Dior",
         genero: "mujer",
         descripcion: "Dulce y floral",
-        imagen: "https://www.dior.com/dw/image/v2/BGXS_PRD/on/demandware.static/-/Sites-dior-master-catalog/default/dw5f2d7a22/Y0996429/Y0996429_C099600984_E01_ZHC.jpg?sw=800",
+        imagen: "https://www.dior.com/on/demandware.static/-/Library-Sites-DiorSharedLibrary/default/dwd267ee34/images/beauty/01-FRAGRANCES/2024/MISS-DIOR_2024/PARFUM/LAUNCHPAGE/MD_Parfum_Mood_Detail-Noeud_E-merch_2400x3000.jpg",
         precio: "$2,950 mxn",
         color: "#f8bbd0",
         premium: true
@@ -36,5 +36,4 @@ const listadeperfumes = [
         fuente: "serif",
         premium: false
     }
-    // Agrega aquí más perfumes si quieres...
 ];
