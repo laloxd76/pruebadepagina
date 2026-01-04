@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumería Profesional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="barra">
+        <h1 id="Mi-pagina" onclick="location.reload()" style="cursor:pointer; display:inline;">Perfumería</h1>
+        <button onclick="filtrarPorGenero('hombre')">Hombre</button>
+        <button onclick="filtrarPorGenero('mujer')">Mujer</button>
+    </nav>
+
+    <div id="contenedor-tienda"></div>
+    <div id="pantalla-detalle" style="display: none;"></div>
+
+    <script src="datos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

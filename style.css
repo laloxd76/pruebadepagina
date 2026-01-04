@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://cdn.discordapp.com/attachments/1125854669227438243/1456726576120070145/Gemini_Generated_Image_6d54et6d54et6d54.png?ex=695969d8&is=69581858&hm=e0e57ee357781087ec3a2c225648c025682cc5944dce52d3beb4b6b92a769031&');
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+#barra {
+    background-color: #5C95E6;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    z-index: 1000;
+    color: white;
+}
+
+#contenedor-tienda {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
