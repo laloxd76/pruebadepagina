@@ -35,5 +35,14 @@ const listadeperfumes = [
         precio: "$150 mxn",
         fuente: "serif",
         premium: false
+    },
+    {
+                nombre: "Versace Eros EDP",
+        genero: "hombre",
+        descripcion: "Fragancia de Vainilla",
+        imagen: "https://www.versace.com/on/demandware.static/-/Library-Sites-ver-library/default/dwbf3cbf93/EROS.jpg",
+        precio: "$3,200 mxn",
+        fuente: "serif",
+        premium: true
     }
 ];
